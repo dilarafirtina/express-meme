@@ -1,0 +1,48 @@
+<%- include("header") -%>
+       <!-- Navigation -->
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">Meme Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/add-meme">Add Meme</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Meme Store</h1>
+            </div>
+        </div>
+    </header>
+  
+        <!-- Form -->
+        <div class="container px-4 px-lg-5 mt-5 mb-5">
+            <div class="row justify-content-center">
+                <form role="form" class="center" action="/memes" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                        <small id="nameHelp" class="form-text text-muted">Please enter a name for your meme.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" name="price" id="price" class="form-control">
+                        <small id="priceHelp" class="form-text text-muted">Please enter a price or price range for your meme.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="imgURL">Image URL</label>
+                        <input type="text" name="imgURL" id="imgURL" class="form-control">
+                        <small id="imgURLHelp" class="form-text text-muted">Please enter the URL of your meme image.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include("footer") -%>
